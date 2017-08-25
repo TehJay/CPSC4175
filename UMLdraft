@@ -1,0 +1,10 @@
+digraph G{
+
+     GameBoard -> GamePiece
+     GameBoard -> GameSpace
+     GameSpace -> GameBoard
+     PlayerTurn -> Parser
+     GamePiece -> Parser   
+     Parser -> GameBoard
+
+}
