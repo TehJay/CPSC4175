@@ -3,7 +3,7 @@
 /**
  * An abstract Piece, contains the methods that a Piece must have to navigate the board correctly.
  * 
- * @author Gal
+ * @author 
  *
  */
 public abstract class Piece {

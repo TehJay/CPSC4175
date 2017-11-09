@@ -2,7 +2,7 @@
 /**
  * The data structure that stores the pieces, tracks their locations on the board as the game progresses, checks whether a movement of a piece is legal. 
  * 
- * @author Gal Cohen
+ * @author
  *
  */
 public class Board {

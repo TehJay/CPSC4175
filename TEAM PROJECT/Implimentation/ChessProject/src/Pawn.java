@@ -1,7 +1,7 @@
 
 /**
  * 
- * @author Gal Cohen
+ * @author 
  */
 public class Pawn extends Piece{
 

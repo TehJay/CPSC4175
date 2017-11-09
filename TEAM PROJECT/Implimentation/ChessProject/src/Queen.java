@@ -1,6 +1,6 @@
 /**
  * 
- * @author Gal Cohen
+ * @author 
  */
 public class Queen extends Piece{
 
