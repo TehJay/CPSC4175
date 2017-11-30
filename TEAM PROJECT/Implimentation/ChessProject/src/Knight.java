@@ -1,11 +1,19 @@
+// TODO: Auto-generated Javadoc
 /**
- * 
+ * The Class Knight.
+ *
  * @author 
  */
 public class Knight extends Piece{
 
+	/** The name. */
 	private String name = "N";
 	
+	/**
+	 * Instantiates a new knight.
+	 *
+	 * @param w the w
+	 */
 	public Knight(boolean w){
 		this.setWhite(w);
 		
@@ -16,6 +24,9 @@ public class Knight extends Piece{
 		}
 	}
 	
+	/* (non-Javadoc)
+	 * @see Piece#canMove(int, int, int, int, boolean)
+	 */
 	public boolean canMove(int oldX, int oldY, int newX, int newY, boolean isNewSpotEmpty) {
 
 		int deltaX;
@@ -33,10 +44,16 @@ public class Knight extends Piece{
 		return false;
 	}
 
+	/* (non-Javadoc)
+	 * @see Piece#drawPiece()
+	 */
 	public String drawPiece() {
 		return this.name;
 	}
 
+	/* (non-Javadoc)
+	 * @see Piece#movePiece()
+	 */
 	public void movePiece() {
 		
 	}

@@ -1,4 +1,5 @@
 
+// TODO: Auto-generated Javadoc
 /**
  * The data structure that stores the pieces, tracks their locations on the board as the game progresses, checks whether a movement of a piece is legal. 
  * 
@@ -7,6 +8,7 @@
  */
 public class Board {
 	
+	/** The board. */
 	Piece[][] board;
 	
 	
@@ -22,6 +24,9 @@ public class Board {
 	}
 	
 	
+	/**
+	 * Initialize board.
+	 */
 	public void initializeBoard(){
 		//initialize the board
 		for (int i = 0; i < 8; i++){
@@ -103,6 +108,15 @@ public class Board {
 		
 	}
 	
+	/**
+	 * Checks if is path clear.
+	 *
+	 * @param oldX the old X
+	 * @param oldY the old Y
+	 * @param newX the new X
+	 * @param newY the new Y
+	 * @return true, if is path clear
+	 */
 	public boolean isPathClear(int oldX, int oldY, int newX, int newY){
 		
 		//System.out.println("isPathClear");
@@ -201,6 +215,12 @@ public class Board {
 		
 	}
 		
+	/**
+	 * Detects checkmate.
+	 *
+	 * @param whiteturn the boolean
+	 * @return true, if successful
+	 */
 	public boolean detectCheck(boolean whiteturn) {
 		int kingLocX = 0;
 		int kingLocY = 0;

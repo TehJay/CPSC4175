@@ -1,5 +1,6 @@
 
 
+// TODO: Auto-generated Javadoc
 /**
  * An abstract Piece, contains the methods that a Piece must have to navigate the board correctly.
  * 
@@ -13,6 +14,7 @@ public abstract class Piece {
 	 */
 	private boolean white = true;
 	
+	/** The first move. */
 	public boolean firstMove = true;
 	
 	/**
@@ -27,7 +29,8 @@ public abstract class Piece {
 	
 	/**
 	 * Tells whether the piece is which or black. White is true, black is false.
-	 * @return
+	 *
+	 * @return true, if is white
 	 */
 	public boolean isWhite(){
 		return this.white;
@@ -35,9 +38,27 @@ public abstract class Piece {
 	
 	
 	
+	/**
+	 * Can move.
+	 *
+	 * @param oldX the old X
+	 * @param oldY the old Y
+	 * @param newX the new X
+	 * @param newY the new Y
+	 * @param isNewSpotEmpty the is new spot empty
+	 * @return true, if successful
+	 */
 	public abstract boolean canMove(int oldX, int oldY, int newX, int newY, boolean isNewSpotEmpty);
 	
+	/**
+	 * Move piece.
+	 */
 	public abstract void movePiece();
 	
+	/**
+	 * Draw piece.
+	 *
+	 * @return the string
+	 */
 	public abstract String drawPiece();
 }

@@ -1,11 +1,19 @@
+// TODO: Auto-generated Javadoc
 /**
- * 
- * @author
+ * The Class Bishop.
+ *
+ * @author 
  */
 public class Bishop extends Piece{
 
+	/** The name. */
 	private String name = "B";
 	
+	/**
+	 * Instantiates a new bishop.
+	 *
+	 * @param w the w
+	 */
 	public Bishop(boolean w){
 		this.setWhite(w);
 		
@@ -17,6 +25,9 @@ public class Bishop extends Piece{
 		
 	}
 	
+	/* (non-Javadoc)
+	 * @see Piece#canMove(int, int, int, int, boolean)
+	 */
 	public boolean canMove(int oldX, int oldY, int newX, int newY, boolean isNewSpotEmpty) {
 
 		int deltaX;
@@ -35,10 +46,16 @@ public class Bishop extends Piece{
 		return false;
 	}
 
+	/* (non-Javadoc)
+	 * @see Piece#drawPiece()
+	 */
 	public String drawPiece() {
 		return this.name;
 	}
 
+	/* (non-Javadoc)
+	 * @see Piece#movePiece()
+	 */
 	public void movePiece() {
 		
 	}

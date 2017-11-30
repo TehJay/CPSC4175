@@ -1,11 +1,19 @@
+// TODO: Auto-generated Javadoc
 /**
- * 
+ * The Class King.
+ *
  * @author 
  */
 public class King extends Piece{
 
+	/** The name. */
 	private String name = "K";
 	
+	/**
+	 * Instantiates a new king.
+	 *
+	 * @param w the w
+	 */
 	public King(boolean w){
 		this.setWhite(w);
 		
@@ -16,6 +24,9 @@ public class King extends Piece{
 		}
 	}
 	
+	/* (non-Javadoc)
+	 * @see Piece#canMove(int, int, int, int, boolean)
+	 */
 	public boolean canMove(int oldX, int oldY, int newX, int newY, boolean isNewSpotEmpty) {
 	
 		int deltaX;
@@ -35,10 +46,16 @@ public class King extends Piece{
 		return false;
 	}
 
+	/* (non-Javadoc)
+	 * @see Piece#drawPiece()
+	 */
 	public String drawPiece() {
 		return this.name;
 	}
 
+	/* (non-Javadoc)
+	 * @see Piece#movePiece()
+	 */
 	public void movePiece() {
 		
 	}

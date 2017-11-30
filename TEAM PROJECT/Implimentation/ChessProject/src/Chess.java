@@ -3,26 +3,41 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+// TODO: Auto-generated Javadoc
 //TODO: check
 //TODO: check mate, stalemate
 
 /**
- * 
- * @author 
+ * The Class Chess.
  *
+ * @author 
  */
 public class Chess {
 	
+	/** The gameboard. */
 	public static Board gameboard;
+	
+	/** The current loc. */
 	public static String currentLoc = null;
+	
+	/** The new loc. */
 	public static String newLoc = null;
+	
+	/** The third argument. */
 	public static String thirdArgument = null;
+	
+	/** The white turn. */
 	//public static boolean askForDraw  = false;
 	public static boolean whiteTurn = true;
 	
 	
 	
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		//initialize game
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -83,20 +98,32 @@ public class Chess {
 		//exit
 	}
 	
+	/**
+	 * Initialize game.
+	 */
 	public static void initializeGame(){
 		gameboard = new Board();
 	}
 	
 	
+	/**
+	 * Resign game.
+	 */
 	public static void resignGame(){
 		
 	}
 	
 	
+	/**
+	 * Game draw.
+	 */
 	public static void gameDraw(){
 		
 	}
 	
+	/**
+	 * Draw board.
+	 */
 	public static void drawBoard(){
 		String[][] result = new String[8][8];
 		
@@ -141,6 +168,12 @@ public class Chess {
 	
 	
 	
+	/**
+	 * File to coordinate.
+	 *
+	 * @param file the file
+	 * @return the int
+	 */
 	public static int fileToCoordinate(String file){
 		int result = (int) file.toLowerCase().charAt(0) - (int)('a');
 		return result;
@@ -148,6 +181,12 @@ public class Chess {
 	
 	
 	
+	/**
+	 * Rank to coordinate.
+	 *
+	 * @param file the file
+	 * @return the int
+	 */
 	public static int rankToCoordinate(String file){
 		int result = 7 - ((int) file.toLowerCase().charAt(1) - (int)('1'));
 		return result;
@@ -156,6 +195,15 @@ public class Chess {
 	
 
 	
+	/**
+	 * Legal input.
+	 *
+	 * @param x1 the x 1
+	 * @param x2 the x 2
+	 * @param x3 the x 3
+	 * @param x4 the x 4
+	 * @return true, if successful
+	 */
 	public static boolean legalInput(int x1, int x2, int x3, int x4){
 		if ((x1 >= 0 && x1 <= 7) && (x2 >= 0 && x2 <= 7) && (x3 >= 0 && x3 <= 7) && (x4 >= 0 && x4 <= 7)){
 			return true;
@@ -166,6 +214,11 @@ public class Chess {
 	}
 	
 	
+	/**
+	 * Parses the input.
+	 *
+	 * @param input the input
+	 */
 	public static void parseInput(String input){
 		StringTokenizer st = null;
 		int count = 0;
@@ -220,6 +273,12 @@ public class Chess {
 	
 	
 	
+	/**
+	 * Pawn promotion.
+	 *
+	 * @param newx the newx
+	 * @param newy the newy
+	 */
 	public static void pawnPromotion(int newx, int newy) {
 		if (gameboard.board[newx][newy].drawPiece().equalsIgnoreCase("wp") && newy == 0) {
 			//if (thirdArgument == null) {
@@ -259,6 +318,9 @@ public class Chess {
 	}
 	
 	
+	/**
+	 * Execute move.
+	 */
 	public static void executeMove(){
 		 
 		int oldx = fileToCoordinate(currentLoc);

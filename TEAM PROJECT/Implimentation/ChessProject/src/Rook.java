@@ -1,11 +1,19 @@
+// TODO: Auto-generated Javadoc
 /**
- * 
+ * The Class Rook.
+ *
  * @author 
  */
 public class Rook extends Piece{
 
+	/** The name. */
 	private String name = "R";
 	
+	/**
+	 * Instantiates a new rook.
+	 *
+	 * @param w the w
+	 */
 	public Rook(boolean w){
 		this.setWhite(w);
 		
@@ -16,6 +24,9 @@ public class Rook extends Piece{
 		}
 	}
 	
+	/* (non-Javadoc)
+	 * @see Piece#canMove(int, int, int, int, boolean)
+	 */
 	public boolean canMove(int oldX, int oldY, int newX, int newY, boolean isNewSpotEmpty) {
 
 		int deltaX;
@@ -33,10 +44,16 @@ public class Rook extends Piece{
 		return false;
 	}
 
+	/* (non-Javadoc)
+	 * @see Piece#drawPiece()
+	 */
 	public String drawPiece() {
 		return this.name;
 	}
 
+	/* (non-Javadoc)
+	 * @see Piece#movePiece()
+	 */
 	public void movePiece() {
 		
 	}
