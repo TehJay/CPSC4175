@@ -1,0 +1,17 @@
+a1 a2 // moves a rook above pawn - false moves
+
+a2 a3 // moves pawn up 1 - ok moves
+
+a2 a4 // moves pawn up 2 - ok moves
+
+aa aa // invalid input 
+
+22 22 // invalid input
+
+// if white player turn, black player piece shouldn't be moveable 
+a7 a6 // moves black pawn up 2 - false move if player is white.
+a2 a4 //  moves white pawn up 2 - false move if player is black.
+
+// resign command gives the win to opposite player
+"resign" // black wins if initiated by white & vice versa
+
